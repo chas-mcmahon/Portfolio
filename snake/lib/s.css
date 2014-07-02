@@ -1,0 +1,43 @@
+html, body {
+
+  padding: 0;
+  margin: 0;
+  border: 0;
+
+  font: inherit;
+
+}
+
+* {
+  font-family: courier;
+}
+
+.board {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  width: 357px;
+}
+
+.snake, .apple, .space {
+  width: 15px;
+  height: 15px;
+  float: left;
+  border: 1px solid black;
+}
+
+.row {
+  clear: both;
+}
+
+.snake {
+ background-color: green;
+}
+
+.apple {
+ background-color: red;
+}
+
+.space {
+ background-color: blue;
+}
