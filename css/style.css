@@ -171,6 +171,11 @@
 			margin-bottom: 0;
 		}
 
+		/*custom css*/
+		#last {
+			float: right;
+		}
+
 	/* Images */
 
 		.image
