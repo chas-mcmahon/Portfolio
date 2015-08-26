@@ -1,20 +1,20 @@
 (function(root){
   var Asteroids = root.Asteroids = (root.Asteroids || {});
 
-  var MoveObject = Asteroids.MoveObject = function (pos, vel, radius, color) {
-    this.pos = pos;
-    this.vel = vel;
-    this.radius = radius;
-    this.color = color;
-    this.centerX = pos[0];
-    this.centerY = pos[1];
+  var MoveObject = Asteroids.MoveObject = function (options) {
+    this.pos = options.pos;
+    this.vel = options.vel;
+    this.radius = options.radius;
+
+    this.centerX = this.pos[0];
+    this.centerY = this.pos[1];
   }
 
   MoveObject.prototype.move = function(screenWidth, screenHeight) {
 
     this.centerX += this.vel[0] % screenWidth;
     this.centerY += this.vel[1] % screenHeight;
-
+    
     if (this.centerX - this.radius >= screenWidth) {
       this.centerX = 0 - this.radius;
     } else if (this.centerX + this.radius <= 0) {
@@ -62,7 +62,3 @@
   };
 
 })(this);
-
-
-
-
